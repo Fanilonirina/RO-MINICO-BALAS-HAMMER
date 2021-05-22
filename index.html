@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>minico</title>
+  <!-- Bootstrap core CSS -->
+  <link href="./static/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="./static/css/style.css" rel="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target="#showListeGains" style="background: lightsteelblue;">
+  <div class="mx-auto" style="width: 98%; background-color: rgba(86,61,124,.15);">
+    <div class="card">
+      <div id="divInsert" class="card-header text-center py-2" name="divInsert" 
+       style="background: lightskyblue;box-shadow: 6px 6px 6px black">
+    </div>
+      <div class="card-body row">
+        <div class="btn-group-vertical col-lg-2" role="group" style="display: block;" >
+          <button id="minicoBtn" name="minicoBtn" class="btn btn-outline-primary my-2" style="box-shadow: 6px 6px 6px black">MINICO</button>
+          <button id="bhammerBtn" name="bhammerBtn" class="btn btn-outline-primary my-2" style="box-shadow: 6px 6px 6px black">BALAS HAMMER</button>
+          <button id="getGraphBtn" name="getGraphBtn" class="btn btn-outline-primary my-2" style="box-shadow: 6px 6px 6px black">ETABLIR LE GRAPH</button>
+          <button id="calculGainBtn" name="calculGainBtn" class="btn btn-outline-primary my-2" style="box-shadow: 6px 6px 6px black">CALCULER LES GAINS</button>
+          <button id="appliquerGain" class="btn btn-outline-primary my-2" style="box-shadow: 6px 6px 6px black">APPLIQUER LE GAIN</button>
+      </div>
+          <div id="table" class="table-responsive col-lg-3">
+  
+            <table name="initialTable"  id="initialTable" class="table table-bordered table-responsive  text-center">
+              <thead>
+                <tr style="background-color: black; color:white" >
+                  <th class="text-center" contenteditable="true"></th>
+                  <th class="text-center labelle" contenteditable="true">1</th>
+                  <th class="text-center labelle" contenteditable="true">2</th>
+                  <th class="text-center labelle" contenteditable="true">3</th>
+                  <th class="text-center labelle" contenteditable="true">4</th>
+                  <th class="text-center labelle" contenteditable="true">5</th>
+                  <th class="text-center labelle" contenteditable="true">6</th>
+                  <th class="text-center" style="background-color: black; color:white" contenteditable="true"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="text-center labelle" style="background-color: black; color:white">A</th>
+                  <td class="pt-3-half" contenteditable="true">9</td>
+                  <td class="pt-3-half" contenteditable="true">12</td>
+                  <td class="pt-3-half" contenteditable="true">9</td>
+                  <td class="pt-3-half" contenteditable="true">6</td>
+                  <td class="pt-3-half" contenteditable="true">9</td>
+                  <td class="pt-3-half" contenteditable="true">10</td>
+                  <th class="pt-3-half a" style="background-color: dimgray;color: white;" contenteditable="true">50</th>
+                </tr>
+                <tr>
+                  <th class="text-center labelle" style="background-color: black; color:white">B</th>
+                  <td class="pt-3-half" contenteditable="true">7</td>
+                  <td class="pt-3-half" contenteditable="true">3</td>
+                  <td class="pt-3-half" contenteditable="true">7</td>
+                  <td class="pt-3-half" contenteditable="true">7</td>
+                  <td class="pt-3-half" contenteditable="true">5</td>
+                  <td class="pt-3-half" contenteditable="true">5</td>
+                  <th class="pt-3-half a" style="background-color: dimgray;color: white;" contenteditable="true">60</th>
+                </tr>
+                <tr>
+                    <th class="text-center labelle" style="background-color: black; color:white">C</th>
+                    <td class="pt-3-half" contenteditable="true">6</td>
+                    <td class="pt-3-half" contenteditable="true">5</td>
+                    <td class="pt-3-half" contenteditable="true">9</td>
+                    <td class="pt-3-half" contenteditable="true">11</td>
+                    <td class="pt-3-half" contenteditable="true">3</td>
+                    <td class="pt-3-half" contenteditable="true">11</td>
+                    <th class="pt-3-half a" style="background-color: dimgray;color: white;" contenteditable="true">20</th>
+                  </tr>
+                  <tr>
+                    <th class="text-center labelle" style="background-color: black; color:white">D</th>
+                    <td class="pt-3-half" contenteditable="true">6</td>
+                    <td class="pt-3-half" contenteditable="true">8</td>
+                    <td class="pt-3-half" contenteditable="true">11</td>
+                    <td class="pt-3-half" contenteditable="true">2</td>
+                    <td class="pt-3-half" contenteditable="true">2</td>
+                    <td class="pt-3-half" contenteditable="true">10</td>
+                    <th class="pt-3-half a" style="background-color: dimgray;color: white;" contenteditable="true">90</th>
+                  </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th class="text-center" style="background-color : dimgray;color: white;"></th>
+                  <th class="pt-3-half b "  contenteditable="true" style="background-color:dimgray;color: white;">40</th>
+                  <th class="pt-3-half b" contenteditable="true" style="background-color: dimgray;color: white;">30</th>
+                  <th class="pt-3-half b" contenteditable="true" style="background-color: dimgray;color: white;">70</th>
+                  <th class="pt-3-half b" contenteditable="true" style="background-color: dimgray;color: white;">20</th>
+                  <th class="pt-3-half b" contenteditable="true" style="background-color: dimgray;color: white;">40</th>
+                  <th class="pt-3-half b" contenteditable="true" style="background-color: dimgray;color: white;">20</th>
+                  <th class="pt-3-half" style="background-color: dimgray;color: white;"></th>
+                </tr>
+              </tfoot>
+            </table>
+            <!-- <p id="" class="text-right"><b>Z = 0</b></p> -->
+            
+          </div>
+  
+          <div id="baseSolution" class="table-responsive col-lg-3 ">
+            
+            <table name="tableBaseSolution"  id="tableBaseSolution" class="table table-bordered table-responsive-sm text-center">
+              <thead>
+                  <tr style="background-color: black; color:white" >
+                    <th class="text-center"></th>
+                    <th class="text-center">1<br></th>
+                    <th class="text-center">2</th>
+                    <th class="text-center">3</th>
+                    <th class="text-center">4</th>
+                    <th class="text-center">5</th>
+                    <th class="text-center">6</th>
+                    <!-- <th class="text-center"></th> -->
+                  </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="text-center" style="background-color: black; color:white">A</th>
+                  <td class="pt-3-half"></td>
+                  <td class="pt-3-half"></td>
+                  <td class="pt-3-half"></td>
+                  <td class="pt-3-half"></td>
+                  <td class="pt-3-half"></td>
+                  <td class="pt-3-half"></td>
+                  <!-- <td class="pt-3-half"></td> -->
+                </tr>
+                <tr>
+                  <th class="text-center" style="background-color: black; color:white">B</th>
+                  <td class="pt-3-half"></td>
+                  <td class="pt-3-half"></td>
+                  <td class="pt-3-half"></td>
+                  <td class="pt-3-half"></td>
+                  <td class="pt-3-half"></td>
+                  <td class="pt-3-half"></td>
+                  <!-- <td class="pt-3-half"></td> -->
+                </tr>
+                <tr>
+                    <th class="text-center" style="background-color: black; color:white">C</th>
+                    <td class="pt-3-half"></td>
+                    <td class="pt-3-half"></td>
+                    <td class="pt-3-half"></td>
+                    <td class="pt-3-half"></td>
+                    <td class="pt-3-half"></td>
+                    <td class="pt-3-half"></td>
+                    <!-- <td class="pt-3-half"></td> -->
+                  </tr>
+                  <tr>
+                    <th class="text-center" style="background-color: black; color:white">D</th>
+                    <td class="pt-3-half"></td>
+                    <td class="pt-3-half"></td>
+                    <td class="pt-3-half"></td>
+                    <td class="pt-3-half"></td>
+                    <td class="pt-3-half"></td>
+                    <td class="pt-3-half"></td>
+                  </tr>
+            </table>
+            <h7 ></h7>
+            <p class="text-right">Z = <b id="total">0</b></p>
+            
+          </div>
+  
+        <div id="graph-container" class="col-lg-4" style="border: solid 1px white;">
+          <div id="myGraph" class="mx-0"  style=" height:500px">
+          </div>
+        </div>
+      </div>
+  </div>
+  <div id="gain" >
+
+      <div class="card" style="height: 200px; ">
+        <h3 class="card-header text-center font-weight-bold py-1" style="font-family: Algerian; box-shadow: 6px 6px 6px black"> GAINS</h3>
+        <div class="card-body col" id="showListeGains" style="height: 20%;overflow: auto;">
+          <ul class="list-group" id="listeGains" style="overflow:visible; height: 20%; text-align: center;">
+          </ul>
+        </div>
+      </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="./static/js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="./static/js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="./static/js/bootstrap.min.js"></script>
+
+  <script src="./static/js/go-debug.js"></script>
+
+  <script type="text/javascript" src="./index.js"></script>
+</body>
+</html>
